@@ -1,0 +1,202 @@
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+header {
+
+  padding: 10px 20px;
+  background-color: #1B263B;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > a {
+  text-decoration: none;
+  color: white;
+  
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.logo > a {
+  text-decoration: none;
+  color: white;
+}
+
+.barra-busqueda {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+  outline: none;
+}
+
+.carrito {
+  font-size: 1rem;
+  color: white;
+}
+
+.nombreAlumno{
+  color: white;
+}
+
+
+
+/* ================Seccion productos ================= */
+.seccion-productos {
+  padding: 20px;
+}
+
+/* Contenedor general */
+
+.botones-orden {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.botones-orden button {
+    padding: 8px 16px;
+    background-color: #415A77; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: auto;
+}
+
+.botones-orden button:hover {
+    background-color: #778DA9; 
+}
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.card-producto {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+}
+
+.card-producto img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card-producto h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card-producto p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-producto button {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #415A77;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-producto button:hover {
+  background-color: #778DA9;
+}
+
+/* ================Seccion carrito ================= */
+.seccion-carrito {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#items-carrito {
+  padding: 10px 0;
+  list-style-type: none;
+  
+}
+
+.bloque-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.nombre-item {
+  font-size: 20px;
+  margin: 0;
+}
+
+.boton-eliminar {
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.total-carrito {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.boton-vaciar {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+
+

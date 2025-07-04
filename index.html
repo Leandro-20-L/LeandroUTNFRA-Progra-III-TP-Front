@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial I</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+
+        <a href="index.html">
+            <div class="logo">GameStore</div>
+        </a>
+        
+        <div class="nombreAlumno"></div>
+        
+        <input type="text" placeholder="Buscar..." class="barra-busqueda" id="inputbuscar">
+        
+        <div class="carrito">
+            <span>Carrito: <span id="contador-carrito">0</span> productos</span>
+        </div>
+    </header>
+
+    
+    <!-- Contenedor principal -->
+    <main>
+    <section class="seccion-productos">
+        <h2>Nuestros Juegos</h2>
+        <div class="botones-orden">
+            <button id="ordenar-nombre">Ordenar por nombre</button>
+            <button id="ordenar-precio">Ordenar por precio</button>
+        </div>
+        <div class="contenedor-productos" id="contenedor-productos"></div>
+    </section>
+
+
+    <!-- Seccion carrito -->
+    <section class="seccion-carrito">
+        <h2>Carrito</h2>
+        
+        <div id="items-carrito" >
+            <p>No hay elementos en el carrito.</p>
+        </div>
+
+        <div class="total-carrito">
+            <p>Total: <span id="precio-total">$0.00</span></p>
+            <button id="btn-vaciar-carrito" class="boton-vaciar">Vaciar Carrito</button>
+        </div>
+    </section>
+
+    </main>
+</body>
+</html>
