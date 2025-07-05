@@ -20,7 +20,7 @@ let productos = [];
 
 /*En este Punto se pide mostrar de forma visible lo que son mis datos,asique 
 lo que hice fue definir un objeto alumno con los datos basicos y ya despues mostrarlo con un  `console.log`. Tambien 
-lo muestro en el DOM seleccionando la clase `.nombreAlumno` */
+lo muestro en el DOM seleccionando la clase `.nombreAlumno` 
 function imprimirDatosAlumno() {
   const alumno = {
     dni: 46363895,
@@ -35,6 +35,8 @@ function imprimirDatosAlumno() {
     nombreAlumnoDiv.textContent = `${alumno.nombre} ${alumno.apellido}`;
   }
 }
+
+*/
 
 //====================MOSTRAR PRODUCTO====================
 //punto 3
@@ -143,7 +145,7 @@ function ordenamiento(criterio) {
         return 0;
     });
 
-    mostrarProductos(productos); // 🔁 mostrar ordenado
+    mostrarProductos(productos); 
 }
 
 
@@ -154,14 +156,40 @@ function vaciarCarrito() {
     actualizarPrecioTotal();
 }
 
-function init(){
+ function verificarNombreUsuario() {
+  const nombre = sessionStorage.getItem("nombreUsuario");
+
+  if (!nombre) {
+    window.location.href = "login.html"; 
+    return false; 
+  } else {
+    const divNombre = document.querySelector(".nombreAlumno");
+    if (divNombre) {
+      divNombre.textContent = `Bienvenido, ${nombre}`;
+    }
+    return true; // usuario sí existe
+  }
+}
+async function init(){
+    //sessionStorage.removeItem("nombreUsuario");
+    const usuarioExiste = verificarNombreUsuario();
     
     imprimirDatosAlumno();
-    cargarProductosDesdeAPI();
+    await cargarProductosDesdeAPI();
     
     document.getElementById("btn-vaciar-carrito").addEventListener("click", vaciarCarrito);
     document.getElementById("ordenar-nombre").addEventListener("click", () => ordenamiento("nombre"));
     document.getElementById("ordenar-precio").addEventListener("click", () => ordenamiento("precio"));
+    const header = document.querySelector(".header");
+    const btnCerrarSesion = document.createElement("button");
+    btnCerrarSesion.textContent = "Cerrar sesión";
+    btnCerrarSesion.addEventListener("click", () => {
+        sessionStorage.removeItem("nombreUsuario");
+        window.location.href = "login.html";
+    });
+    header.appendChild(btnCerrarSesion);
 }
 
 init();
+
+console.log("Productos recibidos desde API:", productos);

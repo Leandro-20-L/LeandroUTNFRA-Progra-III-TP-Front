@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido</title>
+</head>
+<body>
+  <h1>Bienvenido</h1>
+  <form id="formNombre">
+    <label for="nombre">Ingresá tu nombre:</label>
+    <input type="text" id="nombre" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    document.getElementById("formNombre").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value.trim();
+
+      if (nombre) {
+        sessionStorage.setItem("nombreUsuario", nombre);
+        window.location.href = "index.html"; // Redirige al index
+      }
+    });
+  </script>
+</body>
+</html>
