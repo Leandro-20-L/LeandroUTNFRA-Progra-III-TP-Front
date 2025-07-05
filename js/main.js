@@ -174,7 +174,7 @@ async function init(){
     //sessionStorage.removeItem("nombreUsuario");
     const usuarioExiste = verificarNombreUsuario();
     
-    imprimirDatosAlumno();
+    //imprimirDatosAlumno();
     await cargarProductosDesdeAPI();
     
     document.getElementById("btn-vaciar-carrito").addEventListener("click", vaciarCarrito);

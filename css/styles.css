@@ -1,20 +1,33 @@
 /* Estilos globales */
+
+img {
+  width: 160px;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #172031;
 }
 
 h2 {
   text-align: center;
   margin-top: 20px;
+  color: white;
+}
+
+button{
+  background-color: red;
+  color: white;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 header {
 
   padding: 10px 20px;
-  background-color: #1B263B;
+  background-color: #1f2c44;
   display: flex;
   justify-content: space-between;
 }
@@ -25,21 +38,19 @@ header > a {
   
 }
 
-.logo {
-  font-size: 1.5rem;
-}
-
 .logo > a {
   text-decoration: none;
   color: white;
 }
 
 .barra-busqueda {
-  padding: 8px;
+  padding: 7px;
   border-radius: 4px;
   border: none;
-  width: 250px;
+  width: 500px;
   outline: none;
+  margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 .carrito {
@@ -48,7 +59,9 @@ header > a {
 }
 
 .nombreAlumno{
-  color: white;
+  color: rgb(128, 228, 231);
+  margin-top: 80px;
+  font-weight: bold;
 }
 
 
@@ -78,28 +91,27 @@ header > a {
 }
 
 .botones-orden button:hover {
-    background-color: #778DA9; 
+    background-color: #4782ce; 
 }
 .contenedor-productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
     padding: 20px;
-    
+    gap: 60px;
 }
 
 .card-producto {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
+  padding-bottom: 0%;
   text-align: center;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #95a9d4;
+  box-shadow: 0 4px 15px rgba(77, 198, 228, 0.897);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-
 }
 
 .card-producto img {
@@ -112,15 +124,18 @@ header > a {
 .card-producto h3 {
   font-size: 1.2rem;
   margin: 10px 0;
+  text-decoration: underline;
 }
 
 .card-producto p {
   font-size: 1rem;
-  color: #333;
+  font-weight: bold;
+  color: #202020;
 }
 
 .card-producto button {
-    margin-top: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     background-color: #415A77;
     border: none;
@@ -131,7 +146,7 @@ header > a {
 }
 
 .card-producto button:hover {
-  background-color: #778DA9;
+  background-color: #4782ce; 
 }
 
 /* ================Seccion carrito ================= */

@@ -2,11 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bienvenido</title>
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <h1>Bienvenido</h1>
+  <header>
+    <img src="/img/logo-game-store.jpg" alt="logo">
+    <h1>GAME STORE</h1>
+    <button onclick="">Admin</button>
+  </header>
   <form id="formNombre">
+    <p>Bienvenido al autoservicio, por favor</p>
     <label for="nombre">Ingresá tu nombre:</label>
     <input type="text" id="nombre" required>
     <button type="submit">Entrar</button>
@@ -23,5 +30,9 @@
       }
     });
   </script>
+  <footer>
+    <p>© 2025 GAME STORE. Todos los derechos reservados.</p>
+    <p class="subtitulo">- Desarrollado por Josue Damacio y Leandro Escobar -</p>
+  </footer>
 </body>
 </html>
