@@ -2,6 +2,7 @@
 
 img {
   width: 160px;
+  border-radius: 13px;
 }
 body {
   font-family: Arial, sans-serif;
@@ -18,10 +19,11 @@ h2 {
 }
 
 button{
-  background-color: red;
+  background-color: rgb(29, 30, 104);
   color: white;
   margin-top: 60px;
   margin-bottom: 50px;
+  height: 40px;
 }
 
 header {
@@ -30,6 +32,12 @@ header {
   background-color: #1f2c44;
   display: flex;
   justify-content: space-between;
+  height: 120px;
+}
+header img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 
 header > a {
@@ -49,7 +57,7 @@ header > a {
   border: none;
   width: 500px;
   outline: none;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   margin-top: 20px;
 }
 
@@ -60,11 +68,22 @@ header > a {
 
 .nombreAlumno{
   color: rgb(128, 228, 231);
-  margin-top: 80px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
+#contenedor-usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
 
+#contenedor-usuario button{
+  margin: 0%;
+  margin-top: 20px;
+}
 
 /* ================Seccion productos ================= */
 .seccion-productos {
@@ -102,7 +121,7 @@ header > a {
 }
 
 .card-producto {
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 15px;
   padding-bottom: 0%;
@@ -152,8 +171,8 @@ header > a {
 /* ================Seccion carrito ================= */
 .seccion-carrito {
   padding: 20px;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  background-color: #2b4d69;
+  border-top: 1px solid #5178b3;
 }
 
 #items-carrito {

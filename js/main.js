@@ -180,14 +180,14 @@ async function init(){
     document.getElementById("btn-vaciar-carrito").addEventListener("click", vaciarCarrito);
     document.getElementById("ordenar-nombre").addEventListener("click", () => ordenamiento("nombre"));
     document.getElementById("ordenar-precio").addEventListener("click", () => ordenamiento("precio"));
-    const header = document.querySelector(".header");
+    const contenedorUsuario = document.getElementById("contenedor-usuario");
     const btnCerrarSesion = document.createElement("button");
     btnCerrarSesion.textContent = "Cerrar sesión";
     btnCerrarSesion.addEventListener("click", () => {
         sessionStorage.removeItem("nombreUsuario");
         window.location.href = "login.html";
     });
-    header.appendChild(btnCerrarSesion);
+    contenedorUsuario.appendChild(btnCerrarSesion);
 }
 
 init();
