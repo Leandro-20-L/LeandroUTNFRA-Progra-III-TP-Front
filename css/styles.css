@@ -210,8 +210,19 @@ header > a {
   font-weight: bold;
 }
 
+.subtitulo {
+    font-size: 12px;
+    color: rgb(130, 252, 242);
+}
 
 
 
-
-
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
