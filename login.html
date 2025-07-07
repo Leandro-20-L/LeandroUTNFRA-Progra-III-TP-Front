@@ -10,7 +10,9 @@
   <header>
     <img src="/img/logo-game-store.jpg" alt="logo">
     <h1>GAME STORE</h1>
-    <button onclick="">Admin</button>
+    <a href="http://localhost:3000/dashboard" onclick="pedirClave(event)">
+      <button>Admin</button>
+    </a>
   </header>
   <form id="formNombre">
     <p>Bienvenido al autoservicio, por favor</p>
@@ -20,6 +22,19 @@
   </form>
 
   <script>
+      function pedirClave(e) {
+    e.preventDefault();
+
+    const clave = prompt("Ingresá la clave:");
+
+    // si, está hardcodeado
+    if (clave === "1234") {
+      window.location.href = "http://localhost:3000/dashboard";
+    } else {
+      alert("Acceso NO Autorizado");
+    }
+  }
+
     document.getElementById("formNombre").addEventListener("submit", function(e) {
       e.preventDefault();
       const nombre = document.getElementById("nombre").value.trim();
