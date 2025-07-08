@@ -23,17 +23,17 @@
 
   <script>
       function pedirClave(e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    const clave = prompt("Ingresá la clave:");
+        const clave = prompt("Ingresá la clave:");
 
-    // si, está hardcodeado
-    if (clave === "1234") {
-      window.location.href = "http://localhost:3000/dashboard";
-    } else {
-      alert("Acceso NO Autorizado");
-    }
-  }
+        // si, está hardcodeado
+        if (clave === "1234") {
+        window.location.href = "http://localhost:3000/dashboard";
+        } else {
+        alert("Acceso NO Autorizado");
+        }
+        }
 
     document.getElementById("formNombre").addEventListener("submit", function(e) {
       e.preventDefault();
