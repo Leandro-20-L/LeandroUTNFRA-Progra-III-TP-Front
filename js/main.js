@@ -54,9 +54,13 @@ function mostrarCarrito(array){
     
     array.forEach(producto =>{
         htmlCarrito += `
-            <li class="bloque-item">
-            <p class="nombre-item"> <img src="${producto.imagen}" alt="${producto.nombre}"> Nombre:${producto.nombre}  - Precio: ${producto.precio}</p>
-            <button class="boton-eliminar" onclick="eliminarProducto(${producto.id})">Eliminar</button>
+             <li class="bloque-item">
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <div class="nombre-item">
+                <span><strong>Nombre:</strong> ${producto.nombre}</span>
+                <span><strong>Precio:</strong> $${producto.precio}</span>
+                </div>
+                <button class="boton-eliminar" onclick="eliminarProducto(${producto.id})">Eliminar</button>
             </li>
         `;
     })
@@ -81,7 +85,7 @@ function eliminarProducto(id){
     if (index !== -1) {
         carrito.splice(index, 1); 
         mostrarCarrito(carrito);
-        actualizarContadorCarrito();
+        //actualizarContadorCarrito();
         actualizarPrecioTotal();
     }
 }

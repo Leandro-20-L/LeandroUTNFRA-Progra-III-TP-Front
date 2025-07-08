@@ -171,38 +171,57 @@ header > a {
 /* ================Seccion carrito ================= */
 .seccion-carrito {
   padding: 20px;
-  background-color: #2b4d69;
+  background-color: #2b4d69; /* Fondo azul oscuro */
   border-top: 1px solid #5178b3;
+  color: #ffffff;
 }
 
 #items-carrito {
   padding: 10px 0;
   list-style-type: none;
-  
 }
 
 .bloque-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #f8f8f8;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  background-color: #3c5a7d; /* Azul intermedio */
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  gap: 1rem;
+}
+
+.bloque-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 2px solid #5178b3;
 }
 
 .nombre-item {
-  font-size: 20px;
+  font-size: 18px;
+  color: #ffffff;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .boton-eliminar {
   cursor: pointer;
-  background-color: red;
+  background-color: #ff3b3f;
   border: none;
   color: white;
-  border-radius: 4px;
-  padding: 6px 10px;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: bold;
+  
+}
+
+.boton-eliminar:hover {
+  background-color: #d63031;
 }
 
 .hidden {
@@ -245,3 +264,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
