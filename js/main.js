@@ -87,7 +87,7 @@ function mostrarCarrito(array){
     array.forEach(producto =>{
         htmlCarrito += `
             <li class="bloque-item">
-            <p class="nombre-item">${producto.nombre}  -  ${producto.precio}</p>
+            <p class="nombre-item"> <img src="${producto.imagen}" alt="${producto.nombre}"> Nombre:${producto.nombre}  - Precio: ${producto.precio}</p>
             <button class="boton-eliminar" onclick="eliminarProducto(${producto.id})">Eliminar</button>
             </li>
         `;
@@ -103,7 +103,7 @@ function agregarCarritos(id) {
     if (productoEncontrado) {
         carrito.push(productoEncontrado);
         mostrarCarrito(carrito);
-        actualizarContadorCarrito();
+        
         actualizarPrecioTotal();
     }
 }
@@ -129,6 +129,8 @@ function actualizarPrecioTotal() {
     let total = carrito.reduce((acum, producto) => acum + producto.precio, 0);
     const spanTotal = document.getElementById("precio-total");
     spanTotal.textContent = `$${total.toFixed(2)}`;
+    console.log("Carrito:", carrito);
+console.log("Total calculado:", total);
 }
 
 //================= ORDENAMIENTO DE PRODUCTOS SEGUN EL PARAMETRO==============
@@ -172,7 +174,7 @@ function vaciarCarrito() {
 }
 async function init(){
     //sessionStorage.removeItem("nombreUsuario");
-    const usuarioExiste = verificarNombreUsuario();
+    verificarNombreUsuario();
     
     //imprimirDatosAlumno();
     await cargarProductosDesdeAPI();
