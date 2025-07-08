@@ -119,7 +119,7 @@ function ordenamiento(criterio) {
 function vaciarCarrito() {
     carrito = []; 
     mostrarCarrito(carrito);
-    actualizarContadorCarrito();
+    //actualizarContadorCarrito();
     actualizarPrecioTotal();
 }
 
