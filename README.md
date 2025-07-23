@@ -1,6 +1,8 @@
 # 🎮 GameStore - Autoservicio de Videojuegos y Consolas
 
-![Logo GameStore](img\logo-game-store.jpg)
+<p align="center">
+  <img src="img/logo-game-store.jpg" alt="Logo GameStore" width="150" style="border-radius: 15px;">
+</p>
 
 Bienvenido a **GameStore**, un sistema web estilo autoservicio donde los usuarios pueden navegar, buscar, ordenar y agregar videojuegos o consolas a su carrito de compra de manera ágil y moderna.
 
@@ -30,13 +32,13 @@ Bienvenido a **GameStore**, un sistema web estilo autoservicio donde los usuario
 
 ## ✨ Vista previa
 
-![Vista previa](img\main.png)
+![Vista previa](img/main.png)
 
 ---
 
 ## LOGIN
 
-![login](img\login.png)
+![login](img/login.png)
 
 ---
 
